@@ -1,4 +1,4 @@
-pragma solidity 0.8.11;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -22,7 +22,7 @@ contract AdvancedCollectible is ERC721URIStorage , VRFConsumerBase {
 
     constructor(address _VRFCoordinator, address _LinkToken, bytes32 _keyhash)
     VRFConsumerBase(_VRFCoordinator, _LinkToken)
-    ERC721("Doggies", "DOG")
+    ERC721("Doggies", "DGG")
     {
         keyHash = _keyhash;
         fee = 0.1 * 10 ** 18; // 0.1 LINK (Varies by network)
